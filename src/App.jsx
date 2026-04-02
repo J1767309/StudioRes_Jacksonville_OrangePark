@@ -75,7 +75,7 @@ function App() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[600px] flex items-end justify-center overflow-hidden pb-16">
         <div className="absolute inset-0">
           <img src={heroImage} alt="StudioRes Jacksonville Orange Park" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
