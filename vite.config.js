@@ -5,7 +5,7 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/Marriott_Studio_Res_Newnan/',
+  base: '/StudioRes_Jacksonville_OrangePark/',
   build: {
     outDir: 'docs',
   },

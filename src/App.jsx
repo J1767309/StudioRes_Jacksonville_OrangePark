@@ -1,15 +1,18 @@
 import './App.css'
 import { useState } from 'react'
-import { Phone, Mail, MapPin, ChefHat, ParkingCircle, Dumbbell, Zap, Wifi, Shirt, DoorOpen, Award, Check, Smartphone } from 'lucide-react'
-import heroImage from './assets/ATLNI-Twilight-1.jpg'
-import exteriorImage from './assets/ATLNI-Exterior-1.jpg'
-import room1 from './assets/ATLNI-Q1ST-1.jpg'
-import room2 from './assets/ATLNI-Q1ST-2.jpg'
-import room3 from './assets/ATLNI-Q1ST-3.jpg'
-import room4 from './assets/ATLNI-Q1ST-4.jpg'
-import room5 from './assets/ATLNI-Q1ST-5.jpg'
-import lobby3 from './assets/ATLNI-Lobby-3.jpg'
-import patio from './assets/ATLNI-Patio-1.jpg'
+import { Phone, Mail, MapPin, ChefHat, ParkingCircle, Dumbbell, Zap, Wifi, Shirt, DoorOpen, Award, Check, Smartphone, Shield, Star } from 'lucide-react'
+import heroImage from './assets/JAXRS-Exterior-1.jpg'
+import exteriorImage from './assets/JAXRS-Exterior-2.jpg'
+import exteriorImage3 from './assets/JAXRS-Exterior-3.jpg'
+import room1 from './assets/JAXRS-Room-Q1-1.jpg'
+import room2 from './assets/JAXRS-Room-Q1-2.jpg'
+import room3 from './assets/JAXRS-Room-2Q-1.jpg'
+import room4 from './assets/JAXRS-Room-2Q-2.jpg'
+import room5 from './assets/JAXRS-Room-2Q-3.jpg'
+import lobby1 from './assets/JAXRS-Lobby-1.jpg'
+import lobby2 from './assets/JAXRS-Lobby-2.jpg'
+import fitness from './assets/JAXRS-Fitness-1.jpg'
+import livingSpace from './assets/JAXRS-Living-1.jpg'
 import constructionWorker from './assets/construction-worker.jpg'
 import techProfessional from './assets/tech-professional.jpg'
 import corporateTrainer from './assets/corporate-trainer.jpg'
@@ -21,7 +24,6 @@ function App() {
 
   // Calculate savings based on number of days
   const calculateSavings = (days) => {
-    const months = days / 30
     const dailySavings = 750 / 30 // $750 per month = $25 per day
     return {
       totalSavings: Math.round(dailySavings * days),
@@ -56,9 +58,9 @@ function App() {
               />
             </div>
             <div className="flex items-center gap-6">
-              <a href="tel:+14706866730" className="hidden sm:flex items-center gap-2 text-gray-700 hover:text-[#006B7D] transition-colors">
+              <a href="tel:+19045798150" className="hidden sm:flex items-center gap-2 text-gray-700 hover:text-[#006B7D] transition-colors">
                 <Phone className="w-4 h-4" />
-                <span>(470) 686-6730</span>
+                <span>(904) 579-8150</span>
               </a>
               <button
                 onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
@@ -75,20 +77,20 @@ function App() {
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={exteriorImage} alt="StudioRes Newnan" className="w-full h-full object-cover" />
+          <img src={heroImage} alt="StudioRes Jacksonville Orange Park" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Your Home Base for<br />Newnan Project Work
+              Your Home Base for<br />Jacksonville Project Work
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-200">
-              Extended-stay comfort designed for workers at major employers and data center projects
+              Extended-stay comfort designed for workers, military families, and professionals in the Orange Park area
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1761245906298&key=CORP&dtt=true&app=resvlink"
+                href="https://www.marriott.com/en-us/hotels/jaxrs-studiores-jacksonville-orange-park/overview/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-4 rounded-lg font-bold text-lg text-white transition-all hover:scale-105 shadow-lg text-center"
@@ -107,11 +109,39 @@ function App() {
         </div>
       </section>
 
+      {/* Military Appreciation Banner */}
+      <section className="py-8 bg-gradient-to-r from-[#1B3A4B] to-[#006B7D]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-4 text-white">
+              <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+                <Shield className="w-8 h-8 text-yellow-300" />
+              </div>
+              <div>
+                <h2 className="text-2xl md:text-3xl font-bold">Military Appreciation Package</h2>
+                <p className="text-lg text-gray-200 mt-1">
+                  We proudly support our military families. Active duty, veterans, and their families enjoy special rates.
+                </p>
+              </div>
+            </div>
+            <a
+              href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1768847508272&key=CORP&app=resvlink"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-shrink-0 px-8 py-4 bg-yellow-500 text-gray-900 rounded-lg font-bold text-lg hover:bg-yellow-400 transition-all hover:scale-105 shadow-lg flex items-center gap-2"
+            >
+              <Star className="w-5 h-5" />
+              Book Military Rate
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Special Offer Banner */}
       <section className="py-4" style={{ backgroundColor: '#006B7D' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <p className="text-lg md:text-xl font-semibold">
-            🎉 Special Offer: Save 15% on Extended Stays for Project Workers
+            Special Offer: Save 15% on Extended Stays for Project Workers
           </p>
         </div>
       </section>
@@ -124,8 +154,8 @@ function App() {
               Built for Extended Stays, Not Just Overnight
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              StudioRes Newnan serves the growing workforce from major employers including Amazon and 
-              data center developments in Coweta County
+              StudioRes Jacksonville Orange Park serves the growing workforce and military community
+              in the greater Jacksonville and Clay County area
             </p>
           </div>
 
@@ -206,8 +236,8 @@ function App() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            <img src={room3} alt="Room View" className="rounded-lg shadow-md hover:shadow-xl transition-shadow w-full h-64 object-cover" />
-            <img src={room4} alt="Kitchen Bar" className="rounded-lg shadow-md hover:shadow-xl transition-shadow w-full h-64 object-cover" />
+            <img src={room3} alt="Two Queen Studio" className="rounded-lg shadow-md hover:shadow-xl transition-shadow w-full h-64 object-cover" />
+            <img src={room4} alt="Studio Room View" className="rounded-lg shadow-md hover:shadow-xl transition-shadow w-full h-64 object-cover" />
             <img src={room5} alt="Studio Layout" className="rounded-lg shadow-md hover:shadow-xl transition-shadow w-full h-64 object-cover" />
           </div>
 
@@ -289,7 +319,7 @@ function App() {
                 <div className="text-xl">for {stayDays} days</div>
               </div>
             </div>
-            
+
             <div className="mt-12 max-w-3xl mx-auto bg-white/10 backdrop-blur p-8 rounded-xl">
               <h3 className="text-2xl font-bold mb-6">How We Calculate Your Savings</h3>
               <div className="text-left space-y-4 text-lg">
@@ -371,7 +401,7 @@ function App() {
           <div className="grid md:grid-cols-4 gap-6">
             {[
               { icon: ChefHat, title: 'Full Kitchen', desc: 'Cook like you\'re at home' },
-              { icon: ParkingCircle, title: 'Free Parking', desc: 'Long-term parking for work vehicles' },
+              { icon: ParkingCircle, title: 'Free Parking', desc: 'Complimentary on-site parking' },
               { icon: Shirt, title: 'On-Site Laundry', desc: 'No searching for laundromats' },
               { icon: Dumbbell, title: '24-Hour Fitness', desc: 'Work out on your schedule' },
               { icon: Zap, title: 'EV Charging', desc: 'Electric vehicle charging stations' },
@@ -397,24 +427,24 @@ function App() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#006B7D' }}>
-                Perfect Location in Newnan
+                Perfect Location in Orange Park
               </h2>
               <p className="text-xl text-gray-600 mb-8">
-                Convenient access to major employers and data center projects throughout Coweta County
+                Convenient access to NAS Jacksonville, major employers, and everything south Jacksonville has to offer
               </p>
-              
+
               <div className="space-y-4 mb-8">
                 <div className="flex items-start gap-4">
                   <MapPin className="w-6 h-6 text-[#006B7D] flex-shrink-0 mt-1" />
                   <div>
-                    <div className="font-bold text-lg">20 Celebrate Life Parkway</div>
-                    <div className="text-gray-600">Newnan, Georgia 30265</div>
+                    <div className="font-bold text-lg">8045 Parramore Road</div>
+                    <div className="text-gray-600">Jacksonville, Florida 32244</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <Phone className="w-6 h-6 text-[#006B7D] flex-shrink-0 mt-1" />
                   <div>
-                    <a href="tel:+14706866730" className="font-bold text-lg hover:text-[#006B7D]">(470) 686-6730</a>
+                    <a href="tel:+19045798150" className="font-bold text-lg hover:text-[#006B7D]">(904) 579-8150</a>
                   </div>
                 </div>
               </div>
@@ -424,27 +454,31 @@ function App() {
                 <ul className="space-y-2 text-gray-600">
                   <li className="flex items-center gap-2">
                     <Check className="w-5 h-5 text-green-600" />
-                    Close to major employers in Newnan
+                    Minutes from Orange Park Mall & shopping
                   </li>
                   <li className="flex items-center gap-2">
                     <Check className="w-5 h-5 text-green-600" />
-                    Easy access to data center project sites
+                    Near HCA Florida Orange Park Hospital
                   </li>
                   <li className="flex items-center gap-2">
                     <Check className="w-5 h-5 text-green-600" />
-                    Near I-85 and major highways
+                    Easy access off I-295 and Collins Road
                   </li>
                   <li className="flex items-center gap-2">
                     <Check className="w-5 h-5 text-green-600" />
-                    Grocery stores and restaurants nearby
+                    30 minutes to Jacksonville Beach
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <Check className="w-5 h-5 text-green-600" />
+                    Close to NAS Jacksonville & military installations
                   </li>
                 </ul>
               </div>
             </div>
 
             <div className="space-y-6">
-              <img src={exteriorImage} alt="StudioRes Newnan Exterior" className="rounded-xl shadow-lg w-full" />
-              <img src={patio} alt="Outdoor Patio with EV Charging" className="rounded-xl shadow-lg w-full" />
+              <img src={exteriorImage} alt="StudioRes Jacksonville Orange Park Exterior" className="rounded-xl shadow-lg w-full" />
+              <img src={exteriorImage3} alt="StudioRes Property View" className="rounded-xl shadow-lg w-full" />
             </div>
           </div>
         </div>
@@ -467,7 +501,7 @@ function App() {
               <div className="p-8 bg-gradient-to-br from-blue-50 to-white">
                 <h3 className="text-2xl font-bold mb-4" style={{ color: '#006B7D' }}>Construction Professional</h3>
                 <p className="text-gray-700">
-                  Working on a 3-month project? Our full kitchens, free parking for your work truck, 
+                  Working on a project in the Jacksonville area? Our full kitchens, free parking for your work truck,
                   and on-site laundry make extended stays comfortable and affordable.
                 </p>
               </div>
@@ -480,7 +514,7 @@ function App() {
               <div className="p-8 bg-gradient-to-br from-purple-50 to-white">
                 <h3 className="text-2xl font-bold mb-4" style={{ color: '#006B7D' }}>Tech Professional</h3>
                 <p className="text-gray-700">
-                  Relocating for a data center position? Stay with us for 30-90 days while you find your 
+                  Relocating to the Jacksonville area? Stay with us for 30-90 days while you find your
                   permanent home. Modern facilities, workspace, and Marriott rewards included.
                 </p>
               </div>
@@ -493,7 +527,7 @@ function App() {
               <div className="p-8 bg-gradient-to-br from-green-50 to-white">
                 <h3 className="text-2xl font-bold mb-4" style={{ color: '#006B7D' }}>Corporate Trainer</h3>
                 <p className="text-gray-700">
-                  Managing teams or making recurring visits? Our studio-apartment layout and smart value 
+                  Managing teams or making recurring visits? Our studio-apartment layout and smart value
                   pricing make it easy on your budget and your routine.
                 </p>
               </div>
@@ -506,13 +540,13 @@ function App() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <img src={lobby3} alt="Modern Lobby" className="rounded-xl shadow-lg" />
+            <img src={lobby1} alt="Modern Lobby" className="rounded-xl shadow-lg" />
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#006B7D' }}>
                 The Marriott Name You Trust
               </h2>
               <p className="text-xl text-gray-600 mb-8">
-                StudioRes is Marriott's newest extended-stay brand, bringing you the quality and 
+                StudioRes is Marriott's newest extended-stay brand, bringing you the quality and
                 consistency you expect with smart value pricing.
               </p>
               <div className="space-y-4">
@@ -620,44 +654,66 @@ function App() {
 
       {/* Booking Section */}
       <section id="booking" className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#006B7D' }}>
             Ready to Book Your Extended Stay?
           </h2>
           <p className="text-xl text-gray-600 mb-12">
-            Special rates available for project workers and corporate bookings
+            Special rates available for project workers, military families, and corporate bookings
           </p>
 
-          <div className="bg-gray-50 p-8 rounded-xl shadow-lg mb-8">
-            <div className="text-2xl font-bold mb-4" style={{ color: '#FF6B35' }}>
-              15% Off Extended Stays
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div className="bg-gray-50 p-8 rounded-xl shadow-lg">
+              <div className="text-2xl font-bold mb-4" style={{ color: '#FF6B35' }}>
+                15% Off Extended Stays
+              </div>
+              <p className="text-gray-600 mb-6">
+                Special discount for project workers staying 7 days or more
+              </p>
+              <a
+                href="https://www.marriott.com/en-us/hotels/jaxrs-studiores-jacksonville-orange-park/overview/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block w-full px-12 py-4 rounded-lg font-bold text-lg text-white transition-all hover:scale-105 shadow-lg"
+                style={{ backgroundColor: '#006B7D' }}
+              >
+                Book Now
+              </a>
             </div>
-            <p className="text-gray-600 mb-6">
-              Special discount for project workers staying 7 days or more
-            </p>
-            <a
-              href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1761245906298&key=CORP&dtt=true&app=resvlink"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block w-full md:w-auto px-12 py-4 rounded-lg font-bold text-lg text-white transition-all hover:scale-105 shadow-lg"
-              style={{ backgroundColor: '#006B7D' }}
-            >
-              Book Now
-            </a>
+
+            <div className="bg-gradient-to-br from-[#1B3A4B] to-[#006B7D] p-8 rounded-xl shadow-lg text-white">
+              <div className="flex items-center justify-center gap-2 mb-4">
+                <Shield className="w-7 h-7 text-yellow-300" />
+                <div className="text-2xl font-bold text-yellow-300">
+                  Military Appreciation
+                </div>
+              </div>
+              <p className="text-gray-200 mb-6">
+                Special rates for active duty, veterans, and military families
+              </p>
+              <a
+                href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1768847508272&key=CORP&app=resvlink"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block w-full px-12 py-4 bg-yellow-500 text-gray-900 rounded-lg font-bold text-lg transition-all hover:scale-105 hover:bg-yellow-400 shadow-lg"
+              >
+                Book Military Rate
+              </a>
+            </div>
           </div>
 
-          <div id="contact" className="grid md:grid-cols-2 gap-6 mt-12">
+          <div id="contact" className="grid md:grid-cols-2 gap-6 mt-8">
             <div className="bg-white p-6 rounded-xl shadow-md border-2 border-gray-200">
               <h3 className="font-bold text-xl mb-4">Corporate & Group Rates</h3>
               <p className="text-gray-600 mb-4">
                 Need multiple rooms or recurring stays? Contact us for special corporate pricing.
               </p>
-              <a 
-                href="tel:+14706866730"
+              <a
+                href="tel:+19045798150"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-lg font-semibold hover:bg-gray-800 transition-colors"
               >
                 <Phone className="w-5 h-5" />
-                Call (470) 686-6730
+                Call (904) 579-8150
               </a>
             </div>
 
@@ -689,11 +745,11 @@ function App() {
             {[
               {
                 q: "What's included in the kitchen?",
-                a: "Each studio includes a stovetop, full-size refrigerator, and microwave."
+                a: "Each studio includes a stovetop, full-size refrigerator, and microwave. Please note that guests bring their own cookware and utensils to prepare meals."
               },
               {
                 q: "Is parking really free?",
-                a: "Yes! We offer complimentary on-site parking including long-term parking for work vehicles. We also have electric vehicle charging stations available."
+                a: "Yes! We offer complimentary on-site parking for all guests, including long-term parking for work vehicles."
               },
               {
                 q: "What's the pet policy?",
@@ -701,7 +757,7 @@ function App() {
               },
               {
                 q: "Do you offer weekly or monthly rates?",
-                a: "Yes! We specialize in extended stays and offer special rates for stays of 2 weeks or more. Call us at (470) 686-6730 for extended-stay pricing."
+                a: "Yes! We specialize in extended stays and offer special rates for longer stays. Call us at (904) 579-8150 for extended-stay pricing."
               },
               {
                 q: "Is laundry included?",
@@ -716,8 +772,12 @@ function App() {
                 a: "Yes! We have 24-hour access to all facilities including the fitness center, and our design is perfect for guests on various work schedules."
               },
               {
-                q: "How close are you to major employers?",
-                a: "We're conveniently located in Newnan with easy access to major employers and project sites throughout Coweta County, including quick access to I-85."
+                q: "Do you offer military rates?",
+                a: "Yes! We proudly offer a Military Appreciation package with special rates for active duty service members, veterans, and their families. Use our Military Appreciation booking link or call us at (904) 579-8150 for details."
+              },
+              {
+                q: "How close are you to major employers and attractions?",
+                a: "We're conveniently located off I-295 and Collins Road in the Orange Park area of Jacksonville. We're minutes from Orange Park Mall, HCA Florida Orange Park Hospital, and River Road Historic District. Jacksonville Beach is about a 30-minute drive. We're also close to NAS Jacksonville and other military installations."
               }
             ].map((faq, idx) => (
               <div key={idx} className="bg-white p-6 rounded-xl shadow-md">
@@ -744,11 +804,16 @@ function App() {
             <div>
               <h3 className="font-bold text-lg mb-4">Contact</h3>
               <div className="space-y-2 text-gray-400">
-                <p>20 Celebrate Life Parkway</p>
-                <p>Newnan, GA 30265</p>
+                <p>8045 Parramore Road</p>
+                <p>Jacksonville, FL 32244</p>
                 <p className="mt-4">
-                  <a href="tel:+14706866730" className="hover:text-white transition-colors">
-                    (470) 686-6730
+                  <a href="tel:+19045798150" className="hover:text-white transition-colors">
+                    (904) 579-8150
+                  </a>
+                </p>
+                <p>
+                  <a href="mailto:sales@hotelmc.net" className="hover:text-white transition-colors">
+                    sales@hotelmc.net
                   </a>
                 </p>
               </div>
@@ -758,8 +823,11 @@ function App() {
               <h3 className="font-bold text-lg mb-4">Quick Links</h3>
               <div className="space-y-2">
                 <a href="#booking" className="block text-gray-400 hover:text-white transition-colors">Book Now</a>
-                <a href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1761245906298&key=CORP&dtt=true&app=resvlink" target="_blank" rel="noopener noreferrer" className="block text-gray-400 hover:text-white transition-colors">
+                <a href="https://www.marriott.com/en-us/hotels/jaxrs-studiores-jacksonville-orange-park/overview/" target="_blank" rel="noopener noreferrer" className="block text-gray-400 hover:text-white transition-colors">
                   Book on Marriott.com
+                </a>
+                <a href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1768847508272&key=CORP&app=resvlink" target="_blank" rel="noopener noreferrer" className="block text-gray-400 hover:text-white transition-colors">
+                  Military Appreciation Rate
                 </a>
                 <a href="https://www.marriott.com/loyalty.mi" target="_blank" rel="noopener noreferrer" className="block text-gray-400 hover:text-white transition-colors">
                   Marriott Bonvoy
@@ -769,7 +837,7 @@ function App() {
           </div>
 
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400">
-            <p>© 2025 StudioRes Newnan. Part of Marriott International, Inc.</p>
+            <p>&copy; 2026 StudioRes Jacksonville Orange Park. Part of Marriott International, Inc.</p>
           </div>
         </div>
       </footer>
@@ -778,4 +846,3 @@ function App() {
 }
 
 export default App
-
