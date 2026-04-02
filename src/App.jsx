@@ -5,6 +5,7 @@ import heroImage from './assets/JAXRS-Hero.jpg'
 import exteriorImage from './assets/JAXRS-Exterior-2.jpg'
 import orangeParkMall from './assets/OrangeParkMall.webp'
 import exteriorImage3 from './assets/JAXRS-Exterior-3.jpg'
+import hcaFlorida from './assets/HCA-Florida.jpg'
 import room1 from './assets/JAXRS-Room-Q1-1.jpg'
 import room2 from './assets/JAXRS-Room-Q1-2.jpg'
 import room3 from './assets/JAXRS-Room-2Q-1.jpg'
@@ -479,7 +480,7 @@ function App() {
 
             <div className="space-y-6">
               <img src={orangeParkMall} alt="Orange Park Mall - Minutes Away" className="rounded-xl shadow-lg w-full" />
-              <img src={exteriorImage3} alt="StudioRes Property View" className="rounded-xl shadow-lg w-full" />
+              <img src={hcaFlorida} alt="HCA Florida Orange Park Hospital - Nearby" className="rounded-xl shadow-lg w-full" />
             </div>
           </div>
         </div>
