@@ -1,7 +1,7 @@
 import './App.css'
 import { useState } from 'react'
 import { Phone, Mail, MapPin, ChefHat, ParkingCircle, Dumbbell, Zap, Wifi, Shirt, DoorOpen, Award, Check, Smartphone, Shield, Star } from 'lucide-react'
-import heroImage from './assets/JAXRS-Exterior-1.jpg'
+import heroImage from './assets/JAXRS-Hero.jpg'
 import exteriorImage from './assets/JAXRS-Exterior-2.jpg'
 import exteriorImage3 from './assets/JAXRS-Exterior-3.jpg'
 import room1 from './assets/JAXRS-Room-Q1-1.jpg'
