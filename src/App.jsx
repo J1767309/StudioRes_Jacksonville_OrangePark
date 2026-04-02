@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Phone, Mail, MapPin, ChefHat, ParkingCircle, Dumbbell, Zap, Wifi, Shirt, DoorOpen, Award, Check, Smartphone, Shield, Star } from 'lucide-react'
 import heroImage from './assets/JAXRS-Hero.jpg'
 import exteriorImage from './assets/JAXRS-Exterior-2.jpg'
+import orangeParkMall from './assets/OrangeParkMall.webp'
 import exteriorImage3 from './assets/JAXRS-Exterior-3.jpg'
 import room1 from './assets/JAXRS-Room-Q1-1.jpg'
 import room2 from './assets/JAXRS-Room-Q1-2.jpg'
@@ -477,7 +478,7 @@ function App() {
             </div>
 
             <div className="space-y-6">
-              <img src={exteriorImage} alt="StudioRes Jacksonville Orange Park Exterior" className="rounded-xl shadow-lg w-full" />
+              <img src={orangeParkMall} alt="Orange Park Mall - Minutes Away" className="rounded-xl shadow-lg w-full" />
               <img src={exteriorImage3} alt="StudioRes Property View" className="rounded-xl shadow-lg w-full" />
             </div>
           </div>
